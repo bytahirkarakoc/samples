@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: Fortify-test
+pool: NewPool152
 
 
 variables:
@@ -38,8 +38,9 @@ steps:
     applicationType: 'dotnet'
     fortifyProjects: '**\*.sln'
     fortifyBuildId: '.net'
+    runFortifyRulepackUpdate: true
     fortifyScanType: 'LocalScan'
     runFortifyUpload: true
-    fortifyServerName: 'ssc'
-    fortifyApplicationName: 'Azure-dotnet'
+    fortifyServerName: 'fortifySSC_test'
+    fortifyApplicationName: 'azureDotnet'
     fortifyApplicationVersion: '2.0'
